@@ -1,0 +1,47 @@
+@import '~styles/flex_box.scss';
+@import '~styles/variables';
+.video-pages {
+  position: relative;
+  line-height: 0;
+  img {
+    display: block;
+  }
+  .video-box {
+    padding: 0px 4vw;
+    .video-container {
+      border-radius: 4px;
+      overflow: hidden;
+      .activi-movie {
+        width: 100%;
+      }
+    }
+  }
+  .bottom-btn {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100vw;
+    padding: 10px 0px;
+    background: #ffffff;
+    box-shadow: 0 0 0 0 #d9d9d9;
+    display: flex;
+    border-top: 1px solid #d9d9d9;
+    z-index: 5;
+    .join-btn {
+      background: #e85c40;
+      border-radius: 2px;
+      height: 44px;
+      line-height: 44px;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 0.6px;
+      text-align: center;
+      flex: 1;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+}
+.paddingBottom {
+  padding-bottom: 60px;
+}

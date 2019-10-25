@@ -1,0 +1,11 @@
+@mixin large-menu-nav {
+  display: block;
+  width: 100vw;
+  padding: 22px 3.2vw 21px;
+  background-color: #fff;
+  color: #333;
+  font-size: 0.87rem;
+  letter-spacing: 0.02rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid $fainter-gray;
+}

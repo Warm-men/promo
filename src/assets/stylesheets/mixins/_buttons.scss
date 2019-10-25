@@ -1,0 +1,183 @@
+@import 'src/assets/stylesheets/variables';
+@mixin desktop-button ($color: $primary-color, $scalar: 1, $outlined: true) {
+  border: 1px solid $color;
+  @if $outlined {
+    color: $color;
+    background: rgba(0, 0, 0, 0);
+  }
+  @else {
+    color: $white;
+    background: $color;
+  }
+  text-transform: uppercase;
+  border-radius: 0;
+  letter-spacing: 1px * $scalar;
+  font-size: 16px * $scalar;
+  padding: 15px * $scalar 30px * $scalar;
+  text-align: center;
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+@mixin button-variant($color, $background, $border) {
+  font-family: $raleway;
+  $active-background: $background;
+  $active-border: $border;
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
+  @include hover {
+    color: $color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+  &:active,
+  &.active,
+  .open>&.dropdown-toggle {
+    color: $color;
+    background-color: $active-background;
+    border-color: $active-border; // Remove the gradient for the pressed/active state
+    background-image: none;
+    @include box-shadow($btn-active-box-shadow);
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      background-color: $background;
+      border-color: $border;
+    }
+    @include hover {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+  font-family: $raleway;
+}
+
+@mixin button-outline-variant($color) {
+  color: $color;
+  background-image: none;
+  background-color: transparent;
+  border-color: $color;
+  @include hover {
+    color: #fff;
+    background-color: $color;
+    border-color: $color;
+  }
+  &:focus,
+  &.focus {
+    color: #fff;
+    background-color: $color;
+    border-color: $color;
+  }
+  &:active,
+  &.active,
+  .open>&.dropdown-toggle {
+    color: #fff;
+    background-color: $color;
+    border-color: $color;
+    &:hover,
+    &:focus,
+    &.focus {
+      color: #fff;
+      background-color: $color;
+      border-color: $color;
+    }
+  }
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      border-color: lighten($color, 20%);
+    }
+    @include hover {
+      border-color: lighten($color, 20%);
+    }
+  }
+}
+
+//used in occasion, sizes desktop onboarding
+@mixin button-selectable( $width, $color: $black, $background: transparent, $border: $mid-gray, $active-color: $white, $active-background: $secondary-color-new, $active-border: $secondary-color-new) {
+  color: $color;
+  background-color: $background;
+  border-color: $border; // &:hover {
+  //   color: $active-color;
+  //   background-color: $active-background;
+  //   border-color: $active-border;
+  // }
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+  } // &:active,
+  // &.active, {
+  //   color: $active-color;
+  //   background-color: $active-background;
+  //   border-color: $active-border;
+  //   &:hover,
+  //   &:focus,
+  //   &.focus {
+  //     color: $active-color;
+  //     background-color: $active-background;
+  //     border-color: $active-border;
+  //   }
+  // }
+  &.disabled,
+  &:disabled {
+    &:focus,
+    &.focus {
+      background-color: $background;
+      border-color: $border;
+    }
+    &:hover {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+  width: $width;
+  height: 50px;
+  border-radius: 100px;
+  font-family: $raleway;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 1.6px;
+  text-align: center;
+  font-variant-numeric: lining-nums;
+}
+
+@mixin button-selectable-mobile( $width, $color: $black, $background: transparent, $border: $mid-gray, $active-color: $white, $active-background: $secondary-color-new, $active-border: $secondary-color-new) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+  width: $width;
+  height: 50px;
+  border-radius: 100px;
+  font-family: $raleway;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 1.6px;
+  text-align: center;
+  font-variant-numeric: lining-nums;
+  &:active,
+  &.active {
+    color: $active-color;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+}

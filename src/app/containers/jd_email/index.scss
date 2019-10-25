@@ -1,0 +1,60 @@
+@import '~styles/flex_box.scss';
+@import '~styles/variables';
+
+.jd {
+  img {
+    margin-bottom: -6px;
+  }
+
+  .jd-email {
+    position: relative;
+    .operation-box {
+      position: absolute;
+      text-align: center;
+      left: 0px;
+      top: 64px;
+      width: 100%;
+      input {
+        width: flex_pt(300);
+        height: flex_pt(50);
+        background-color: #efefef;
+        outline: none;
+        border: none;
+        padding-left: 15px;
+        margin-bottom: 15px;
+        font-size: 13px;
+      }
+      .code-number {
+        position: relative;
+        .getCode {
+          width: 80px;
+          height: 26px;
+          line-height: 26px;
+          text-align: center;
+          font-size: 13px;
+          border-radius: 3px;
+          position: absolute;
+          right: flex_pt(36);
+          top: flex_pt(25);
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          background-color: #333333;
+          color: #fff;
+        }
+      }
+      .button {
+        width: flex_pt(308);
+        height: flex_pt(50);
+        margin-top: 16px;
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #fc2400;
+        color: #fff;
+        line-height: flex_pt(50);
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

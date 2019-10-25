@@ -1,0 +1,10 @@
+@import 'mixins/select';
+
+select {
+  width: 100%;
+  background-color: transparent;
+}
+
+.select-with-arrow-wrapper {
+  @include select-arrow();
+}

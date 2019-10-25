@@ -1,0 +1,14 @@
+@mixin special-bottom-padding-for-safari($padding: 70px) {
+  @supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+    padding-bottom: $padding;
+  }
+}
+
+@mixin clearfix {
+  clear: both;
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

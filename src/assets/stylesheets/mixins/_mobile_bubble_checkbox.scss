@@ -1,0 +1,47 @@
+input[type="checkbox"] {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+input.bubble[type='radio'] {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin: 0;
+  border: 0;
+  outline: none;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    height: 31px;
+    width: 31px;
+    background-image: url('bubble-inactive.png');
+    background-size: 100%;
+    background-color: #fff;
+  }
+  &:checked {
+    &:before {
+      background-image: url('bubble-active.png');
+    }
+  }
+}
+
+.bubble-input-subtext {
+  margin-left: 30px;
+  margin-top: -8px;
+  color: #aaa;
+  font-style: italic;
+}
+
+.bubble-input-price {
+  margin-left: 13px;
+  color: #000;
+  opacity: 0.5;
+  float: right;
+  margin-top: 4px;
+}
