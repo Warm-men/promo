@@ -1,0 +1,36 @@
+@import 'src/assets/stylesheets/variables';
+
+//bootstrap button overrides
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border-color: #b2b2af;
+  font-family: $raleway;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  text-align: center;
+  color: $black;
+}
+
+.btn-md {
+  height: 60px;
+	font-family: $raleway;
+	font-size: 12px;
+	line-height: 1.7;
+	letter-spacing: 1.6px;
+	text-align: center;
+	color: $white;
+  border-radius: 2px;
+}
+.btn-sm {
+  font-size: 12px;
+  padding: 0.8rem;
+  border-radius: .14rem;
+  width: 116px;
+  height: 38px;
+}

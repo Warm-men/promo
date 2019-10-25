@@ -1,0 +1,168 @@
+@import '../variables';
+@import '../mixins/dropdown';
+@import '../mixins/buttons';
+
+header.header {
+  height: 81px;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000 !important;
+  width: 100% !important;
+  min-width: 1024px;
+
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07);
+  background: $white;
+
+  .container,
+  .row,
+  .col-sm {
+    height: 100%;
+    position: relative;
+  }
+
+  .logo {
+    display: inline-block;
+    height: 81px;
+    width: 190px;
+    background-image: url('images/logo-black.svg');
+    background-size: auto 33%;
+    background-repeat: no-repeat;
+    background-position: center left;
+    cursor: pointer;
+    margin-right: 18px;
+    flex: 0 0 190px;
+  }
+
+  .profile-menu {
+    flex: 0 0 65px;
+    height: 100%;
+    @include dropdown('right');
+
+    .item {
+      background-image: url('images/profile.svg');
+      background-repeat: no-repeat;
+      background-size: auto 33%;
+      background-position: center center;
+    }
+  }
+
+  .cart-menu {
+    flex: 0 0 40px;
+    height: 100%;
+    @include dropdown();
+
+    .item {
+      background-image: url('images/cart.svg');
+      background-repeat: no-repeat;
+      background-size: auto 33%;
+      background-position: center center;
+      position: relative;
+    }
+
+    .cart-count {
+      color: $white;
+      position: absolute;
+      top: 4px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      pointer-events: none;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .gift-cards-menu, .site-sale-menu {
+    display: inline-block;
+    text-align: center;
+    flex: 0 0 130px;
+    @include dropdown();
+    .item a {
+      color: $primary-color-new;
+    }
+  }
+
+  .referral-menu {
+    display: inline-block;
+    text-align: center;
+    flex: 0 0 170px;
+    @include dropdown();
+  }
+
+  .subscriber-menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .browse-menu,
+  .totes-menu {
+    text-align: center;
+    display: inline-block;
+    flex: 0 0 125px;
+    @include dropdown('center');
+  }
+
+  .sale-menu {
+    text-align: center;
+    display: inline-block;
+    flex: 0 0 125px;
+    @include dropdown('center');
+    a {
+      color: #e24c44 !important;
+    }
+  }
+
+  .non-subscriber-menu {
+    flex: 1;
+    height: 100%;
+    display: flex;
+
+    .learn-more {
+      @include desktop-button($black, 0.8);
+      display: block;
+      flex: 1;
+      margin: 20px 18px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .join-now {
+      @include desktop-button($primary-color, 0.8, false);
+      display: block;
+      flex: 1;
+      margin: 20px 18px 20px 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  // clear old site behavior
+  font-size: 16px;
+
+  // duplicate bootstrap styles for use on old site
+  .container {
+    max-width: 960px;
+  }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .col-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}

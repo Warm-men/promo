@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="59px" viewBox="0 0 59 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>购买结束</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="活动结束" transform="translate(-158.000000, -104.000000)">
+            <g id="购买结束" transform="translate(158.000000, 104.000000)">
+                <circle id="Oval-21" fill="#F3F3F3" cx="29.5" cy="29.5" r="29.5"></circle>
+                <g id="Group-3" transform="translate(27.000000, 16.000000)" fill="#E85C40">
+                    <polygon id="Combined-Shape" points="4 0 4 18 1 18 1 0"></polygon>
+                    <circle id="Oval-3" cx="2.5" cy="24.5" r="2.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

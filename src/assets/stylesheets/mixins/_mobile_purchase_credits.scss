@@ -1,0 +1,25 @@
+@mixin purchase-credits {
+  .expiration {
+    padding: 2vh 3.5vw 0 3.5vw;
+    margin: 0;
+    color: #707070;
+    font-size: 0.74rem;
+    letter-spacing: 0.11rem;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  .amount {
+    width: 100%;
+    height: 5.7vh;
+    padding: 0 3.5vw 1.7vh 3.5vw;
+    margin-bottom: 0;
+    color: #333;
+    font-family: $proxima-semibold, sans-serif;
+    font-size: 0.91rem;
+    letter-spacing: 0.03rem;
+    border: none;
+    border-bottom: 1px solid #ececec;
+    box-shadow: none;
+    text-transform: uppercase;
+  }
+}

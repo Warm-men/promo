@@ -1,0 +1,13 @@
+@mixin wide-mobile-button($font, $text-color, $border-color, $button-color) {
+  margin: 3vw;
+  width: 94vw;
+  height: 52px;
+  border-radius: 3px;
+  font-family: $font;
+  border: 1px solid $border-color;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: $text-color;
+  background: $button-color;
+  outline: none !important;
+}
